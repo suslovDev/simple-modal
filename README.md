@@ -7,6 +7,12 @@ Project Features:
 - Smooth appearance and disappearance
 - When it disappears, it is removed from the DOM
 
+How to use:
+
+1. Pass the component or markup as prop "Component" in Modal component
+2. In the description of the passed component, destructure the "onClose" prop
+3. See examples for full understanding
+
 ## Available Scripts
 
 In the project directory, you can run:
