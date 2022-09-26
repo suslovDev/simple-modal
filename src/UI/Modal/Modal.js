@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import ModalContent from "./ModalContent";
 
 const Modal = ({ children, onClose }) => {
-  const [isCliced, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const [isHide, setIsHide] = useState(false);
 
   useEffect(() => {
-    if (isCliced) {
+    if (isClicked) {
       setIsHide(true);
       const timer = setTimeout(() => {
         onClose();
@@ -15,7 +15,7 @@ const Modal = ({ children, onClose }) => {
         clearTimeout(timer);
       };
     }
-  }, [isCliced, isHide, onClose]);
+  }, [isClicked, isHide, onClose]);
 
   const handleClick = () => {
     setIsClicked(true);
@@ -23,7 +23,6 @@ const Modal = ({ children, onClose }) => {
 
   return (
     <ModalContent
-      nestedContent={children}
       handleClick={handleClick}
       isHide={isHide}
     />

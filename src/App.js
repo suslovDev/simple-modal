@@ -14,14 +14,9 @@ function App() {
 
   return (
     <div>
-      <h1>It Work!</h1>
+      <h1>Few examples of using my modal)</h1>
       <button onClick={handleOpenModal}>Open Modal</button>
-      {isOpen && (
-        <Modal onClose={handleClose}>
-          {/* just one prop 'onClose' to change state for conditional render the Modal */}
-          <h1>I am example modal! (there can be any component...)</h1>
-        </Modal>
-      )}
+      {isOpen && <Modal onClose={handleClose} name='Example_1' />}
     </div>
   );
 }
