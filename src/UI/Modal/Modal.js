@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ModalContent from "./ModalContent";
 
-const Modal = ({ children, onClose }) => {
+const Modal = ({ children, onClose, Component }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [isHide, setIsHide] = useState(false);
 
@@ -25,6 +25,7 @@ const Modal = ({ children, onClose }) => {
     <ModalContent
       handleClick={handleClick}
       isHide={isHide}
+      Component={Component}
     />
   );
 };
