@@ -1,3 +1,4 @@
+![Screenshot](face.png)
 # This project is a simple modal window mechanism.
 
 Project Features:
